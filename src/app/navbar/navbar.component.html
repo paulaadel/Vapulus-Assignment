@@ -1,0 +1,13 @@
+<mat-sidenav-container class="sidenav-container">
+
+
+    <mat-toolbar class="mb-3" color="primary">
+
+      <h1 class="nav-brand" routerLink="/Home">Wookie Movies</h1>
+      <input class="form-control form-control-sm ms-auto w-25" type="text" placeholder="Search Movie..."
+      [(formControl)]="Search" (keyup.enter)="Searching()"/>
+       <button class="btn btn-success ms-2" (click)="Searching()">search</button>
+
+    </mat-toolbar>
+<router-outlet></router-outlet>
+</mat-sidenav-container>

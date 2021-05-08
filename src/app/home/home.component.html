@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let movie of allMovies
+  ; let i = index">
+
+    <div class="movie mb-4">
+    <div class="movieImg">
+    <img class="img-fluid" [src]="movie.backdrop"/>
+  </div>
+  <div class="movieDetail text-center">
+    <h4 class="text-center">{{ movie.title }}</h4>
+    <p class="text-center">{{movie.overview | slice:0:75}}...</p>
+    <button class="btn btn-outline-primary mt-4" [routerLink] = "['/Home', i]">See More Details</button>
+  </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row mt-5">
+<div class="col-lg-6 mt-5">
+  <img class="img-fluid" [src]="movie.backdrop">
+</div>
+<div class="col-lg-6 mt-5">
+<h2 class="text-white fw-bolder pb-4">{{movie.title}} <span class="rate">({{movie.imdb_rating}})</span></h2>
+<ngb-rating class="fs-1" [readonly]=true [(rate)]="movie.imdb_rating"></ngb-rating> <br>
+<span>{{movie.released_on |date}}</span> | <span>{{movie.length}}</span> | <span>{{movie.director}}</span>
+<p class="text-white cast pt-2 pb-3">{{movie.cast}}</p>
+<p class="text-white">{{movie.overview}}</p>
+
+
+
+</div>
+</div>
+</div>
